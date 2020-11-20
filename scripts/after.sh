@@ -6,4 +6,4 @@ cd /var/www/dist
 aws s3 cp s3://angular-codebuild-cicd/angular/angular.zip /var/www/dist
 unzip angular.zip
 sudo rm -rf angular.zip
-sudo mkdir /var/www/sachin-tendulkar
+sudo mkdir /var/www/sachin-tendulkar-1

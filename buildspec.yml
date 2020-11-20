@@ -16,13 +16,15 @@ phases:
     commands:
       - npm run build:ci
       - npm run test:ci
-  post_build:
-    commands:
-      - cd ./dist/angular-devops
-      - zip angular.zip *
-    #  - aws s3 sync --debug ./dist/angular-devops s3://angular-devops-cicd --acl 'public-read' --delete
+  #post_build:
+   # commands:
+    #  - aws s3 sync ./dist/angular-devops s3:// --acl 'public-read' --delete
 
 artifacts:
   files:
-    - ./dist/angular-devops/angular.zip
+    - '**/*.html'
+    - '**/*.js'
+    - '**/*.css'
+    - '**/*.ico'
   discard-paths: yes
+  base-directory: 'dist/angular-devops'

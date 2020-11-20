@@ -4,5 +4,5 @@ os: linux
 hooks:
   AfterInstall:
     - location: scripts/after.sh
-      timeout: 60
+      timeout: 120
       runas: root

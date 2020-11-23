@@ -4,7 +4,7 @@ phases:
   install:
     commands:
       # Update libs
-      - yum install -y httpd
+      - echo "Hiii"
   pre_build:
     commands:
       - npm install

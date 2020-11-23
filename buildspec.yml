@@ -20,7 +20,7 @@ artifacts:
     - 'appspec.yml'
     - 'scripts/after.sh'
     - 'dist/angular-devops/**/*' 
-  discard-paths: yes
+  #discard-paths: yes
   #base-directory: 'dist/angular-devops' 
 
 

@@ -23,5 +23,6 @@ artifacts:
     #- '**/*.css'
     #- '**/*.ico'
     - 'appspec.yml'
+    - 'scripts/after.sh'
   #discard-paths: yes
   #base-directory: 'dist/angular-devops'

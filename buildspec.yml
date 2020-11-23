@@ -16,6 +16,7 @@ phases:
 artifacts:
   files:
     - 'appspec.yml'
+    - 'scripts/before.sh'
     - 'scripts/after.sh'
     - 'dist/angular-devops/**/*' 
   #discard-paths: yes

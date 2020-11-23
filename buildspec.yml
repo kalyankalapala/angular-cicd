@@ -23,5 +23,5 @@ artifacts:
     - '**/*.css'
     - '**/*.ico'
     - 'appspec.yml'
- # discard-paths: yes
+  discard-paths: yes
  # base-directory: 'dist/angular-devops'

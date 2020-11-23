@@ -18,11 +18,11 @@ phases:
 
 artifacts:
   files:
-    #- '**/*.html'
-    #- '**/*.js'
-    #- '**/*.css'
-    #- '**/*.ico'
+    - '**/*.html'
+    - '**/*.js'
+    - '**/*.css'
+    - '**/*.ico'
     - 'appspec.yml'
     - 'scripts/after.sh'
-  #discard-paths: yes
-  #base-directory: 'dist/angular-devops'
+  discard-paths: yes
+  base-directory: 'dist/angular-devops'

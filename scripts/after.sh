@@ -5,22 +5,12 @@
 sudo yum install -y httpd
 
 #### /var/www/dist ####
-cd /var/www
+cd /var/www && sudo rm -rf dist/
 sudo mkdir /var/www/dist
-cd /var/www/dist
-sudo rm -rf *
-sudo aws s3 cp s3://angular-devops-ci-cd/angular.zip /var/www/dist
-#aws s3 cp s3://mydevopscicd/angular.zip .
-sudo unzip angular.zip
-sudo rm -rf angular.zip
-sudo rm -rf *sh *yml *txt
+cd /var/www/dist && sudo rm -rf *
+sudo aws s3 cp s3://angular-devops-ci-cd/s3-artifacts.zip /var/www/dist
+sudo unzip s3-artifacts.zip && sudo rm -rf s3-artifacts.zip
+sudo rm -rf *.yml scripts
+cd /var/www/dist/dist/angular-devops/ && sudo mv *.js *.html *.css *.ico /var/www/dist
+cd /var/www/dist && sudo rm -rf /var/www/dist/dist/
 
-#### /tmp/sachin/tendulkar #####
-sudo mkdir /tmp/sachin-tendulkar
-cd /tmp/sachin-tendulkar
-sudo rm -rf *
-sudo aws s3 cp s3://angular-devops-ci-cd/angular.zip /tmp/sachin-tendulkar
-#aws s3 cp s3://mydevopscicd/angular.zip .
-sudo unzip angular.zip
-sudo rm -rf angular.zip
-sudo rm -rf *sh *yml *txt

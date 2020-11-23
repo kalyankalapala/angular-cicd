@@ -17,6 +17,7 @@ phases:
     #  - aws s3 sync ./dist/angular-devops s3:// --acl 'public-read' --delete
 
 artifacts:
+  secondary-artifacts:
     artifact1:
       files:
         - '**/*.html'

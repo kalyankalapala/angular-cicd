@@ -15,8 +15,10 @@ phases:
   #post_build:
    # commands:
     #  - aws s3 sync ./dist/angular-devops s3:// --acl 'public-read' --delete
-
 artifacts:
+  files:
+    - 'appspec.yml'
+    - 'scripts/after.sh'
   secondary-artifacts:
     artifact1:
       files:
@@ -25,7 +27,6 @@ artifacts:
         - '**/*.css'
         - '**/*.ico'
       base-directory: 'dist/angular-devops'
-    artifact2:
-      files:
-        - 'appspec.yml'
-        - 'scripts/after.sh'
+      name: secondary-artifact-name-1
+
+

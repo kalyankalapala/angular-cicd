@@ -19,14 +19,8 @@ artifacts:
   files:
     - 'appspec.yml'
     - 'scripts/after.sh'
-  secondary-artifacts:
-    artifact1:
-      files:
-        - '**/*.html'
-        - '**/*.js'
-        - '**/*.css'
-        - '**/*.ico'
-      discard-paths: yes
-      base-directory: 'dist/angular-devops' 
+    - 'dist/angular-devops/**/*' 
+  discard-paths: yes
+  #base-directory: 'dist/angular-devops' 
 
 

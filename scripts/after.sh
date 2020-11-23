@@ -1,4 +1,4 @@
-### after ###
+### after.sh ###
 
 #!/bin/bash
 

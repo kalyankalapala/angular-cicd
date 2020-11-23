@@ -3,6 +3,7 @@
 #!/bin/bash
 
 sudo yum install -y httpd
+sudo yum install -y mailx
 
 #### /var/www/dist ####
 cd /var/www && sudo rm -rf dist/

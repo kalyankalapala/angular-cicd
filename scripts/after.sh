@@ -8,7 +8,7 @@ sudo yum install -y httpd
 cd /var/www
 sudo mkdir /var/www/dist
 cd /var/www/dist
-aws s3 cp s3://angular-devops-ci-cd/angular.zip /var/www/dist
+aws s3 cp s3://angular-devops-ci-cd/appspec.yml.txt /var/www/dist
 #aws s3 cp s3://mydevopscicd/angular.zip .
 unzip angular.zip
 sudo rm -rf angular.zip

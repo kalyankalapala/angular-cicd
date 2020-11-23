@@ -17,12 +17,14 @@ phases:
     #  - aws s3 sync ./dist/angular-devops s3:// --acl 'public-read' --delete
 
 artifacts:
-  files:
-    - '**/*.html'
-    - '**/*.js'
-    - '**/*.css'
-    - '**/*.ico'
-    - 'appspec.yml'
-    - 'scripts/after.sh'
-  discard-paths: yes
-  base-directory: 'dist/angular-devops'
+    artifact1:
+      files:
+        - '**/*.html'
+        - '**/*.js'
+        - '**/*.css'
+        - '**/*.ico'
+      base-directory: 'dist/angular-devops'
+    artifact2:
+      files:
+        - 'appspec.yml'
+        - 'scripts/after.sh'

@@ -18,6 +18,6 @@ artifacts:
     - 'scripts/after.sh'
     - 'dist/angular-devops/**/*' 
   discard-paths: yes
-  base-directory: 'dist/angular-devops' 
+  #base-directory: 'dist/angular-devops' 
 
 

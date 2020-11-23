@@ -26,7 +26,7 @@ artifacts:
         - '**/*.js'
         - '**/*.css'
         - '**/*.ico'
-      base-directory: 'dist/angular-devops'
-      name: secondary-artifact-name-1
+       discard-paths: yes
+      base-directory: 'dist/angular-devops' 
 
 

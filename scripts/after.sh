@@ -4,7 +4,6 @@
 
 sudo yum install -y httpd
 sudo yum install -y mailx
-sudo rm -rf *.txt /var/www/angular-frontend-dist
 
 
 #### /var/www/dist ####

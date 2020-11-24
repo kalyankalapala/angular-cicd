@@ -12,9 +12,9 @@ phases:
       - npm run test:ci
   post_build:
     commands:
-      #- zip -r s3-artifacts.zip scripts appspec.yml dist/angular-devops
+      - zip -r s3-artifacts.zip scripts appspec.yml dist/angular-devops
       #- aws s3 cp ./s3-artifacts.zip s3://aws-artifacts-angular
-      #- aws s3 cp ./s3-artifacts.zip s3://angular-devops-ci-cd 
+      - aws s3 cp ./s3-artifacts.zip s3://angular-devops-ci-cd 
 artifacts:
   files:
     - 'appspec.yml'

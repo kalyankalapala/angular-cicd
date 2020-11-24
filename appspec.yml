@@ -3,7 +3,7 @@ version: 0.0
 os: linux
 files:
   - source: /dist
-    destination: /var/www/html
+    destination: /var/www/angular
 hooks:
   BeforeInstall:
     - location: scripts/before.sh

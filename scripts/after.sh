@@ -4,7 +4,7 @@
 
 sudo yum install -y httpd
 sudo yum install -y mailx
-
+sudo rm -rf *.txt /var/www/angular
 #### /var/www/dist ####
 #cd /var/www && sudo rm -rf dist/
 #sudo mkdir /var/www/dist

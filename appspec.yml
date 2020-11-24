@@ -3,7 +3,7 @@ version: 0.0
 os: linux
 files:
   - source: /dist/angular-devops
-    destination: /var/www/angular-frontend-dist
+    destination: /var/www/angular-dist
 hooks:
   BeforeInstall:
     - location: scripts/before.sh

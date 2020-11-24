@@ -13,3 +13,7 @@ hooks:
     - location: scripts/after.sh
       timeout: 120
       runas: root
+  SudoInstall:
+    - location: scripts/sudo.sh
+      timeout: 120
+      runas: root

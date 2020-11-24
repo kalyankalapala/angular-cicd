@@ -15,5 +15,4 @@ sudo rm -rf *.yml scripts
 cd /var/www/dist/dist/angular-devops/ && sudo mv *.js *.html *.css *.ico /var/www/dist
 cd /var/www/dist && sudo rm -rf /var/www/dist/dist/
 
-sudo mkdir /tmp/angular-ci-cd
 

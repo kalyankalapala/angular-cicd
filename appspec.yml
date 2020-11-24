@@ -1,6 +1,9 @@
 ### appspec.yaml ####
 version: 0.0
 os: linux
+files:
+  - source: /dist
+    destination: /var/www/html
 hooks:
   BeforeInstall:
     - location: scripts/before.sh

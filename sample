@@ -1,3 +1,18 @@
-sample
-This is a sample file to test jenkins
-jenkins file - sample
+stage('SSH transfer') {
+ script {
+  sshPublisher(
+   continueOnError: false, failOnError: true,
+   publishers: [
+    sshPublisherDesc(
+     configName: "kalyan mit ",
+     verbose: true,
+     transfers: [
+      sshTransfer(
+       sourceFiles: "**/*",
+       remoteDirectory: "//var//www//angular",
+       execCommand: "yum install -y docker"
+      )
+     ])
+   ])
+ }
+}

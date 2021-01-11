@@ -3,6 +3,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'date'
+            }
+            steps {
                 sh 'npm install'
             }
             steps {

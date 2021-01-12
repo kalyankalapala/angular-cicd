@@ -8,10 +8,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'ssh root@3.82.126.130 rm -rf /var/www/cricket/'
-                sh 'ssh root@3.82.126.130 mkdir -p /var/www/cricket'
-                sh 'scp -r /var/lib/jenkins/workspace/ang-cicd/dist/angular-devops/* root@3.82.126.130:/var/www/cricket'
+                sshPublisher(publishers: [sshPublisherDesc(configName: 'angular', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'yum install -y docker', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/var/www/sachin', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '**/*')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
             }
         }                  
     }
 }
+

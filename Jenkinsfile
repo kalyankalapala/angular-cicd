@@ -9,7 +9,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sshagent (['b54ee031-d33f-47d6-9e24-86952c540ebe']) {
-                    sh "scp /root/angular-ci/index.html root@3.93.58.117:/var/www/html"
+                    sh "scp /root/angular-ci/* root@3.93.58.117:/var/www/html"
                 }
             }
         }                  

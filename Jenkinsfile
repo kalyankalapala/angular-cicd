@@ -22,7 +22,7 @@ pipeline {
                                 makeEmptyDirs: false,
                                 noDefaultExcludes: false,
                                 patternSeparator: '[, ]+',
-                                remoteDirectory: '/var/www/kalyan',
+                                remoteDirectory: '//var//www//kalyan',
                                 remoteDirectorySDF: false,
                                 removePrefix: '',
                                 sourceFiles: '**/*'

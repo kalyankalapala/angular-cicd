@@ -16,7 +16,7 @@ pipeline {
                             sshTransfer(
                                 cleanRemote: false,
                                 excludes: '',
-                                execCommand: 'yum install -y docker',
+                                execCommand: 'yum install -y docker && systemctl restart docker',
                                 execTimeout: 120000,
                                 flatten: false,
                                 makeEmptyDirs: false,

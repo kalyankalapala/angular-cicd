@@ -7,11 +7,33 @@ pipeline {
             }
         }
         stage('Deploy') {
-            steps {
-                sshagent (['b54ee031-d33f-47d6-9e24-86952c540ebe']) {
-                    sh "scp /root/angular-ci/* root@3.93.58.117:/var/www/html"
-                }
+        steps {
+            script {
+                sshPublisher(publishers: [
+                    sshPublisherDesc(configName: 'angular',
+                        transfers: [
+                            sshTransfer(
+                                cleanRemote: false,
+                                excludes: '',
+                                execCommand: 'yum remove -y docker',
+                                execTimeout: 120000,
+                                flatten: false,
+                                makeEmptyDirs: false,
+                                noDefaultExcludes: false,
+                                patternSeparator: '[, ]+',
+                                remoteDirectory: '/var/www/html',
+                                remoteDirectorySDF: false,
+                                removePrefix: '',
+                                sourceFiles: '**/*'
+                            )
+                        ],
+                        usePromotionTimestamp: false,
+                        useWorkspaceInPromotion: false,
+                        verbose: false
+                    )]
+                )
             }
-        }                  
+        }
+    }               
     }
 }

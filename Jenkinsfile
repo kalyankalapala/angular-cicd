@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh 'npm install'
                 sh 'ng build'
+                sh 'rm -rf /var/lib/jenkins/workspace/dist-cicd*'
             }
         }
         stage('Deploy') {

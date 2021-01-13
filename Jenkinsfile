@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'date'
+                sh 'npm install'
+                sh 'ng build'
             }
         }
         stage('Deploy') {
@@ -21,7 +22,7 @@ pipeline {
                                 makeEmptyDirs: false,
                                 noDefaultExcludes: false,
                                 patternSeparator: '[, ]+',
-                                remoteDirectory: '/var/www/cricket',
+                                remoteDirectory: '/var/www/kalyan',
                                 remoteDirectorySDF: false,
                                 removePrefix: '',
                                 sourceFiles: '**/*'

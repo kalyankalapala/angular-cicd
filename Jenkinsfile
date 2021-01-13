@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'rm -rf /var/lib/jenkins/workspace/dist-cicd*'
                 sh 'npm install'
                 sh 'ng build'
             }

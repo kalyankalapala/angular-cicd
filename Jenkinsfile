@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sshagent (credentials: ['angular-cicd']) {
-                    sh "scp /var/lib/jenkins/workspace/ang-cicd/dist/angular-devops/* root@3.93.146.129:/root/angular-ci"
+                sshagent (credentials: ['b54ee031-d33f-47d6-9e24-86952c540ebe']) {
+                    sh "ssh -vvv -o StrictHostKeyChecking=no -T root@3.93.58.117"
                 }
             }
         }                  

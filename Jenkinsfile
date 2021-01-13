@@ -21,7 +21,7 @@ pipeline {
                                 makeEmptyDirs: false,
                                 noDefaultExcludes: false,
                                 patternSeparator: '[, ]+',
-                                remoteDirectory: '/var/www/html',
+                                remoteDirectory: '/var/www/cricket',
                                 remoteDirectorySDF: false,
                                 removePrefix: '',
                                 sourceFiles: '**/*'
